@@ -1,48 +1,43 @@
 var keys = require('./keys.js');
 var request = require('request');
-var twitter = require('twitter');
+var Twitter = require('twitter');
 var fs = require('fs');
-var client = new twitter({
+var client = new Twitter({
  consumer_key: 'keys.twitterKeys.consumer_key',
  consumer_secret: 'keys.twitterKeys.consumer_secret',
  access_token_key: 'keys.twitterKeys.access_token_key',
  access_token_secret: 'keys.twitterKeys.access_token_secret'
 });
-var params = {count: 2};
+var params = {count: 20};
 var argOne = process.argv[2];
+var argTwo = process.argv[3] ;
+var spotify = require('spotify');
 
 /*console.log(keys.twitterKeys.consumer_key);
 console.log(keys.twitterKeys.consumer_secret);
 console.log(keys.twitterKeys.access_token_key);
 console.log(keys.twitterKeys.access_token_secret);*/
 
-if (argOne === "my-tweets") {
+/*if (argOne === "my-tweets") {
      client.get('statuses/user_timeline', params, function(error, tweets, response){
-     //if(error) throw error;
-     //console.log(tweets);  // The favorites.
-     /*tweets.forEach(function(tweet) {
-			count++;
-			console.log(count + ': ' + tweet.text + '\n');
-			fs.appendFile("log.txt", count + ': ' + tweet.text + '\n', function(err) {
-				if (err) throw err;
-			});
-		});*/
-          console.log(error);
-     //console.log(JSON.stringify(response, null, 5));  // Raw response object.
-});
-}
+          console.log(JSON.stringify(tweets, null, 2));
+          if (!error) {
+            console.log(tweets);
+          }
+     });
+}*/
 
 if (process.argv[2] === "spotify-this-song") {
+     
+	}
 
-}
-
-if (process.argv[2] === "movie-this") {
+/*if (process.argv[2] === "movie-this") {
 
 }
 
 if (process.argv[2] === "do-what-it-says") {
 
-}
+}*/
 
 /*
 
