@@ -54,7 +54,7 @@ function getMovie() {
      if (argTwo !== undefined) {
           queryInput = argTwo;
      }
-     request('http://www.omdbapi.com/?t=' + queryInput, function (error, response, body) {
+     request('http://www.omdbapi.com/?t=' + queryInput + "&tomatoes=true", function (error, response, body) {
           if (!error && response.statusCode == 200) {
                var movieData = JSON.parse(body);
                console.log("Title: " + movieData.Title);
@@ -64,6 +64,8 @@ function getMovie() {
                console.log("Language: " + movieData.Language);
                console.log("Plot: " + movieData.Plot);
                console.log("Actors: " + movieData.Actors);
+               console.log("Rotten Tomatoes Rating: " + movieData.tomatoUserRating);
+               console.log("Rotten Tomatoes URL: " + movieData.tomatoURL);
                fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors);
           }
           else {
@@ -116,7 +118,7 @@ function getRandom() {
                               if (argTwo !== undefined) {
                                    queryInput = argTwo;
                               }
-                              request('http://www.omdbapi.com/?t=' + queryInput, function (error, response, body) {
+                              request('http://www.omdbapi.com/?t=' + queryInput + "&tomatoes=true", function (error, response, body) {
                                    if (!error && response.statusCode == 200) {
                                         var movieData = JSON.parse(body);
                                         console.log("Title: " + movieData.Title);
@@ -126,6 +128,8 @@ function getRandom() {
                                         console.log("Language: " + movieData.Language);
                                         console.log("Plot: " + movieData.Plot);
                                         console.log("Actors: " + movieData.Actors);
+                                        console.log("Rotten Tomatoes Rating: " + movieData.tomatoUserRating);
+                            		     console.log("Rotten Tomatoes URL: " + movieData.tomatoURL);
                                         fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors);
                                    }
                                    else {
