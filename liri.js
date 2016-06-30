@@ -45,7 +45,6 @@ function getSong() {
          console.log("Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify);
          console.log("Album: " + data.tracks.items[0].album.name);
          fs.appendFile('log.txt', "Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify + "\n" + "Album: " + data.tracks.items[0].album.name);
-         // Do something with 'data'
      });
 }
 
@@ -66,7 +65,7 @@ function getMovie() {
                console.log("Actors: " + movieData.Actors);
                console.log("Rotten Tomatoes Rating: " + movieData.tomatoUserRating);
                console.log("Rotten Tomatoes URL: " + movieData.tomatoURL);
-               fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors);
+               fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors + "\n" + "Rotten Tomatoes Rating: " + movieData.tomatoUserRating + "\n" + "Rotten Tomatoes URL: " + movieData.tomatoURL);
           }
           else {
                console.log(error);
@@ -86,8 +85,6 @@ function getRandom() {
                var dataArray = data.split(',');
                var argOne = dataArray[0];
                var argTwo = dataArray[1];
-               console.log(argOne);
-               console.log(argTwo);
                switch(argOne) {
                     case "my-tweets":
                          getTweets();
@@ -130,7 +127,7 @@ function getRandom() {
                                         console.log("Actors: " + movieData.Actors);
                                         console.log("Rotten Tomatoes Rating: " + movieData.tomatoUserRating);
                             		     console.log("Rotten Tomatoes URL: " + movieData.tomatoURL);
-                                        fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors);
+                                        fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors + "\n" + "Rotten Tomatoes Rating: " + movieData.tomatoUserRating + "\n" + "Rotten Tomatoes URL: " + movieData.tomatoURL);
                                    }
                                    else {
                                         console.log(error);
