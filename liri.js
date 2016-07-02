@@ -35,7 +35,7 @@ function getSong() {
      if (argTwo !== undefined) {
           queryInput = argTwo;
      }
-     spotify.search({ type: 'track', query: queryInput, count: 1 }, function(err, data) {
+     spotify.search({ type: 'track', query: queryInput}, function(err, data) {
          if ( err ) {
              console.log('Error occurred: ' + err);
              return;
