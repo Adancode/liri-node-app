@@ -24,6 +24,7 @@ function getTweets(){
                     console.log(tweets[i].text + " Created on: " + tweets[i].created_at);
                     fs.appendFile('log.txt', tweets[i].text + " Created on: " + tweets[i].created_at + "\n");
                }
+               fs.appendFile('log.txt', "=================================================================");
           } else {
                console.log(error);
           }
@@ -44,7 +45,7 @@ function getSong() {
          console.log("Song Name: " + data.tracks.items[0].name);
          console.log("Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify);
          console.log("Album: " + data.tracks.items[0].album.name);
-         fs.appendFile('log.txt', "Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify + "\n" + "Album: " + data.tracks.items[0].album.name);
+         fs.appendFile('log.txt', "Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify + "\n" + "Album: " + data.tracks.items[0].album.name  + "\n" + "=================================================================");
      });
 }
 
@@ -65,7 +66,7 @@ function getMovie() {
                console.log("Actors: " + movieData.Actors);
                console.log("Rotten Tomatoes Rating: " + movieData.tomatoUserRating);
                console.log("Rotten Tomatoes URL: " + movieData.tomatoURL);
-               fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors + "\n" + "Rotten Tomatoes Rating: " + movieData.tomatoUserRating + "\n" + "Rotten Tomatoes URL: " + movieData.tomatoURL);
+               fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors + "\n" + "Rotten Tomatoes Rating: " + movieData.tomatoUserRating + "\n" + "Rotten Tomatoes URL: " + movieData.tomatoURL + "\n" + "=================================================================");
           }
           else {
                console.log(error);
@@ -104,7 +105,7 @@ function getRandom() {
                                    console.log("Song Name: " + data.tracks.items[0].name);
                                    console.log("Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify);
                                    console.log("Album: " + data.tracks.items[0].album.name);
-                                   fs.appendFile('log.txt', "Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify + "\n" + "Album: " + data.tracks.items[0].album.name);
+                                   fs.appendFile('log.txt', "Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify + "\n" + "Album: " + data.tracks.items[0].album.name + "\n" + "=================================================================");
                               });
                          }
                          getSong();
@@ -127,7 +128,7 @@ function getRandom() {
                                         console.log("Actors: " + movieData.Actors);
                                         console.log("Rotten Tomatoes Rating: " + movieData.tomatoUserRating);
                             		     console.log("Rotten Tomatoes URL: " + movieData.tomatoURL);
-                                        fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors + "\n" + "Rotten Tomatoes Rating: " + movieData.tomatoUserRating + "\n" + "Rotten Tomatoes URL: " + movieData.tomatoURL);
+                                        fs.appendFile('log.txt', "Title: " + movieData.Title + "\n" + "Year: " + movieData.Year + "\n" + "IMDB Rating: " + movieData.imdbRating + "\n" + "Country: " + movieData.Country + "\n" + "Language: " + movieData.Language + "\n" + "Plot: " + movieData.Plot + "\n" + "Actors: " + movieData.Actors + "\n" + "Rotten Tomatoes Rating: " + movieData.tomatoUserRating + "\n" + "Rotten Tomatoes URL: " + movieData.tomatoURL + "\n" + "=================================================================");
                                    }
                                    else {
                                         console.log(error);
